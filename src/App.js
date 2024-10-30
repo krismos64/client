@@ -4,10 +4,11 @@ import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import ApplicationsManager from "./components/ApplicationsManager";
+import MainLayout from "./layouts/MainLayout";
 
 const PrivateRoute = ({ children }) => {
   const { token } = useAuth();
-  return token ? children : <Navigate to="/login" />;
+  return token ? <MainLayout>{children}</MainLayout> : <Navigate to="/login" />;
 };
 
 const App = () => {
