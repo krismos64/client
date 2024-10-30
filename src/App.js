@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import AuthPages from "./components/AuthPages";
 import ApplicationsManager from "./components/ApplicationsManager";
+import Statistics from "./components/Statistics";
 import MainLayout from "./layouts/MainLayout";
 import Legal from "./components/Legal";
 
@@ -21,6 +22,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <ApplicationsManager />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/statistics"
+            element={
+              <PrivateRoute>
+                <Statistics />
               </PrivateRoute>
             }
           />
