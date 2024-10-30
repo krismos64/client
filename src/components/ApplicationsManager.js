@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../api/axios";
 import { useAuth } from "../contexts/AuthContext";
-import { Plus, Moon, Sun, Filter, SortAsc } from "lucide-react";
+import { Plus, Sun, Moon } from "lucide-react";
 
 const ApplicationsManager = () => {
   const [applications, setApplications] = useState([]);
